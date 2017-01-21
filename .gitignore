@@ -10,7 +10,6 @@
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
-public/uploads
 
 
 # Ignore all logfiles and tempfiles.
@@ -22,3 +21,5 @@ public/uploads
 # Ignore Byebug command history file.
 .byebug_history
 config/database.yml
+
+public/uploads
