@@ -1,5 +1,5 @@
 <div class="pull-right">
-  <%= link_to("Add a job", new_job_path, :class => "btn btn-default" ) %>
+  <%= link_to("增加一个社群", new_job_path, :class => "btn btn-default" ) %>
 </div>
 <div class="dropdown clearfix pull-right">
     <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -8,10 +8,10 @@
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
         <li>
-          <%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound")) %>
+          <%= link_to("按照已经在社群活跃次数下限排序", jobs_path(:order => "by_lower_bound")) %>
         </li>
         <li>
-            <%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound")) %>
+            <%= link_to("按照已经在社群活跃次数上限排序", jobs_path(:order => "by_upper_bound")) %>
 
         </li>
         <li>
@@ -25,9 +25,9 @@
     <thead>
         <tr>
             <td>
-                职缺</td>
-            <td>薪资下限</td>
-            <td>薪资上限</td>
+                社群名称</td>
+            <td>已经在社群活跃次数下限</td>
+            <td>已经在社群活跃次数上限</td>
             <td>刊登时间</td>
         </tr>
 
