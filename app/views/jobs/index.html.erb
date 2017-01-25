@@ -6,10 +6,10 @@
     </button>
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
         <li>
-          <%= link_to("按照已经在社群活跃次数下限排序", jobs_path(:order => "by_lower_bound")) %>
+          <%= link_to("按照已经在社群活跃频率下限排序", jobs_path(:order => "by_lower_bound")) %>
         </li>
         <li>
-            <%= link_to("按照已经在社群活跃次数上限排序", jobs_path(:order => "by_upper_bound")) %>
+            <%= link_to("按照已经在社群活跃频率上限排序", jobs_path(:order => "by_upper_bound")) %>
 
         </li>
         <li>
@@ -27,8 +27,8 @@
         <tr>
             <td>
                 社群名称</td>
-            <td>已经在社群活跃次数下限</td>
-            <td>已经在社群活跃次数上限</td>
+            <td>已经在社群活跃频率下限</td>
+            <td>已经在社群活跃频率上限</td>
             <td>刊登时间</td>
         </tr>
 
