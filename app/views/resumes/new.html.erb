@@ -2,8 +2,8 @@
 
 <hr>
 <%= simple_form_for [@job, @resume] do |f| %>
-  <%= f.input :content %>
-  <%= f.input :attachment %>
+  <%= f.input :content, :label => "个人介绍及微信" %>
+  <%= f.input :attachment, :label => "如果已经有社群二维码，请上传图片" %>
 
-  <%= f.submit "送出" %>
+  <%= f.submit "提交" %>
 <% end %>

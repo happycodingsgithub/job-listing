@@ -2,12 +2,12 @@
 
 <%= simple_form_for @job do |f| %>
 
-<%= f.input :title %>
-<%= f.input :description %>
+<%= f.input :title, :label => "社群名称" %>
+<%= f.input :description, :label => "介绍及联系方式" %>
 <%= f.input :wage_lower_bound, :label => "已经在社群活跃频率下限" %>
 <%= f.input :wage_upper_bound, :label => "已经在社群活跃频率上限" %>
-<%= f.input :contact_email %>
-<%= f.input :is_hidden %>
+<%= f.input :contact_email, :label => "联系人微信号" %>
+<%= f.input :is_hidden, :label => ">>>请手动取消勾选，提交后，你就能马上看到新社群<<<"  %>
 
 
   <%= f.submit "提交" %>
