@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
   def index
-    flash[:notice] = "您好，这是为新生大学小伙伴而定制的社群导航网，欢迎您的光临！"
+    flash[:notice] = "只需提交基本材料，您将获得全方位的政策资助评估和辅导！"
   end
 end

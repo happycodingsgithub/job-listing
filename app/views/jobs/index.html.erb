@@ -1,35 +1,17 @@
 
-<div class="dropdown clearfix pull-right">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-      排序
-        <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" aria-labelledby="dropdownMenuDivider">
-        <li>
-          <%= link_to("按照社群人数下限排序", jobs_path(:order => "by_lower_bound")) %>
-        </li>
-        <li>
-            <%= link_to("按照社群人数上限排序", jobs_path(:order => "by_upper_bound")) %>
 
-        </li>
-        <li>
-          <%= link_to("按照发表时间排序", jobs_path ) %>
-
-        </li>
-    </ul>
-</div>
 <div class="pull-right">
-  <%= link_to("增加一个社群", new_job_path, :class => "btn btn-default" ) %>
+  <%= link_to("提交企业资料", new_job_path, :class => "btn btn-default" ) %>
 </div>
 
 <table class="table table-boldered">
     <thead>
         <tr>
             <td>
-                社群名称</td>
-            <td>社群人数下限</td>
-            <td>社群人数上限</td>
-            <td>刊登时间</td>
+                企业行业</td>
+            <td>上年度收入（单位万元）</td>
+            <td>上年度纳税（单位万元）</td>
+            <td>提交时间</td>
         </tr>
 
     </thead>
@@ -37,13 +19,13 @@
         <% @jobs.each do |job| %>
         <tr>
             <td>
-                <%= link_to(job.title, job_path(job)) %>
+                <%= link_to(job.description, job_path(job)) %>
             </td>
             <td>
-                <%= job.wage_lower_bound %>
+                <%= job.wage_lower_bound  %>
             </td>
             <td>
-                <%= job.wage_upper_bound %>
+                <%= job.wage_upper_bound%>
             </td>
             <td>
                 <%= job.created_at %>

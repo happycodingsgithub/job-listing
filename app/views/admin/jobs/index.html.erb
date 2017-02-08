@@ -1,5 +1,5 @@
 <div class="pull-right">
-  <%= link_to("增加一个社群", new_admin_job_path, :class => "btn btn-default" ) %>
+  <%= link_to("增加一个企业", new_admin_job_path, :class => "btn btn-default" ) %>
 </div>
 
 <br><br>
@@ -8,17 +8,17 @@
     <thead>
         <tr>
             <td>
-                社群名称
+                企业名称
             </td>
 
             <td>
-              收到申请数量
+              行业
             </td>
             <td>
-                社群人数下限
+                上年度收入（单位万元）
             </td>
             <td>
-                社群人数上限
+                上年度纳税（单位万元）
             </td>
             <td>
                 管理选项
@@ -37,11 +37,11 @@
 
             <%= link_to(job.title, admin_job_path(job)) %>
         </td>
-        <td> <%= link_to(job.resumes.count, admin_job_resumes_path(job)) %> </td>
-        <td> <%= job.wage_lower_bound %> </td>
+        <td> <%= link_to(job.description, job_path(job)) %> </td>
         <td> <%= job.wage_upper_bound %> </td>
+        <td> <%= job.wage_lower_bound %> </td>
         <td>
-      <%= link_to("Edit", edit_admin_job_path(job), :class => "btn btn-xs btn-info") %>
+      <%= link_to("明细", edit_admin_job_path(job), :class => "btn btn-xs btn-info") %>
       <%= link_to("Destroy", admin_job_path(job), :method => :delete, :class => "btn btn-xs btn-danger", :data => { :confirm => "Are you sure?" }) %>
        <% if job.is_hidden %>
        <%= link_to("Publish", publish_admin_job_path(job) , :method => :post, :class => "btn btn-xs btn-success") %>
